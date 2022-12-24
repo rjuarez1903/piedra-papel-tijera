@@ -1,0 +1,23 @@
+body {
+    background-color: cornflowerblue;
+    color: #d9d9d9;
+}
+
+img {
+    max-width: 100px;
+}
+
+input {
+    width: 100%;
+}
+
+#img-elegido-usuario,
+#img-elegido-maquina {
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 5px solid rebeccapurple;
+}
+
+.txt-purple {
+    color: rebeccapurple
+}

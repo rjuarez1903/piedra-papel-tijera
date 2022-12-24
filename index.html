@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Piedra, papel o tijera</title>
+</head>
+<body>
+    <div class="container">
+
+        <header class="text-center mt-4">
+            <h1 class="txt-purple">Piedra, papel o tijera</h1>
+        </header>
+
+        <section class="row my-4 col-lg-8 offset-lg-2">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingresá tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingresá tu mail">
+                    </div>
+                    <button id="enviar" type="submit" class="btn btn-dark w-100">Enviar</button>
+                </form>
+                <p id="instruccion" class="text-center mt-3">Ingresá tus datos para empezar a jugar!</p>
+        </section>
+
+        <section id="juego" class="d-none">
+            <div class="col-lg-8 offset-lg-2">
+                <h2 class="text-center">El sistema utiliza un generador aleatorio para hacer su elección.</h2>
+                <h2 class="text-center">Te toca!</h2>
+            </div>
+            <div class="col-lg-8 offset-lg-2 d-flex justify-content-center flex-wrap gap-5">
+                <div class="d-flex flex-column">
+                    <img src="images/piedra.png" alt="Piedra" class="d-inline">
+                    <button id="btn-piedra" type="button" class="btn btn-danger">Elegir</button>
+                </div>
+                <div class="d-flex flex-column">
+                    <img src="images/papel.png" alt="Papel" class="d-inline">
+                    <button id="btn-papel" type="button" class="btn btn-danger">Elegir</button>
+                </div>
+                <div class="d-flex flex-column">
+                    <img src="images/tijera.png" alt="Tijera" class="d-inline">
+                    <button id="btn-tijera" type="button" class="btn btn-danger">Elegir</button>
+                </div>
+            </div>
+            <div id="resultados" class="d-none">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <h3 id="elegido-usuario"></h3>
+                    <img id="img-elegido-usuario">
+                    <h3 id="elegido-maquina"></h3>
+                    <img id="img-elegido-maquina">
+                    <h3 id="resultado-final" class="mb-3"></h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="row my-4 col-lg-8 offset-lg-2">
+            <table id="table" class="d-none">
+                <thead>
+                  <tr>
+                    <th id="usuario" scope="col-6">Pelu</th>
+                    <th scope="col-6">Máquina</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id="contador-usuario"></td>
+                    <td id="contador-maquina"></td>
+                  </tr>
+                </tbody>
+              </table>
+        </section>
+        
+        <footer class="text-center">
+            <p>® Rodrigo Juarez</p>
+        </footer>
+
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="data/elementos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
